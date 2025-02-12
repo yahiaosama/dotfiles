@@ -7,6 +7,7 @@
 vim.keymap.set("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", { noremap = true, silent = true })
 
+
 -- Toggle between light and dark theme
 local is_dark = true
 
