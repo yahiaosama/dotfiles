@@ -3,3 +3,4 @@
 -- Add any additional options here
 -- Use ruff
 vim.g.lazyvim_python_ruff = "ruff"
+vim.g.snacks_animate = false
