@@ -6,6 +6,10 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
     },
+    keys = {
+      { "<leader>ac", "<cmd>CodeCompanionChat<CR>", desc = "Toggle CodeCompanion Chat" },
+      { "<leader>aa", "<cmd>CodeCompanionActions<CR>", desc = "CodeCompanion Actions" },
+    },
     opts = {
       adapters = {
         anthropic = function()
@@ -29,6 +33,6 @@ return {
           adapter = "anthropic",
         },
       },
-    }
-  }
+    },
+  },
 }
