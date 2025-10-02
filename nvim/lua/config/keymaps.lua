@@ -4,9 +4,11 @@
 --
 -- Key mappings for buffer navigation
 -- Scroll through buffers with Tab and Shit Tab
-vim.keymap.set("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", { noremap = true, silent = true })
-
+--
+if not vim.g.vscode then
+  vim.keymap.set("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true })
+  vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", { noremap = true, silent = true })
+end
 
 -- Toggle between light and dark theme
 local is_dark = true
@@ -23,3 +25,18 @@ local function toggle_theme()
 end
 
 vim.keymap.set("n", "<leader>ut", toggle_theme, { desc = "Toggle Theme" })
+
+if vim.g.vscode then
+  vim.keymap.set(
+    "n",
+    "]e",
+    "<Cmd>call VSCodeNotify('editor.action.marker.next')<CR>",
+    { noremap = true, silent = true }
+  )
+  vim.keymap.set(
+    "n",
+    "[e",
+    "<Cmd>call VSCodeNotify('editor.action.marker.prev')<CR>",
+    { noremap = true, silent = true }
+  )
+end
