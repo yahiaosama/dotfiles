@@ -39,4 +39,16 @@ if vim.g.vscode then
     "<Cmd>call VSCodeNotify('editor.action.marker.prev')<CR>",
     { noremap = true, silent = true }
   )
+  vim.keymap.set(
+    "n",
+    "<leader>t",
+    "<Cmd>call VSCodeNotify('workbench.action.togglePanel')<CR>",
+    { noremap = true, silent = true }
+  )
+  vim.keymap.set(
+    "n",
+    "<leader>e",
+    "<Cmd>call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>",
+    { noremap = true, silent = true }
+  )
 end
