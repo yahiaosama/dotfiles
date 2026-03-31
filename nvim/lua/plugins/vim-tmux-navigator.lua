@@ -1,17 +1,19 @@
 return {
   {
-    "alexghergh/nvim-tmux-navigation",
-    opts = {
-      disable_when_zoomed = false,
-      keybindings = {
-        left = "<C-h>",
-        down = "<C-j>",
-        up = "<C-k>",
-        right = "<C-l>",
-        last_active = "<C-\\>",
-        next = "<C-Space>",
-      },
+    "christoomey/vim-tmux-navigator",
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
     },
-    lazy = false,
+    keys = {
+      { "<C-h>", "<cmd>TmuxNavigateLeft<cr>" },
+      { "<C-j>", "<cmd>TmuxNavigateDown<cr>" },
+      { "<C-k>", "<cmd>TmuxNavigateUp<cr>" },
+      { "<C-l>", "<cmd>TmuxNavigateRight<cr>" },
+      { "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>" },
+    },
   },
 }
